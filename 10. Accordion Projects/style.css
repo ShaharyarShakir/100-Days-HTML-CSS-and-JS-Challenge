@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #4158D0;
+    background-image: -webkit-linear-gradient(43deg, #4158D0 0%, #C850C0 30%, #FFCC70 66%, #7b0ce3 100%);
+    background-image: -moz-linear-gradient(43deg, #4158D0 0%, #C850C0 30%, #FFCC70 66%, #7b0ce3 100%);
+    background-image: -o-linear-gradient(43deg, #4158D0 0%, #C850C0 30%, #FFCC70 66%, #7b0ce3 100%);
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 30%, #FFCC70 66%, #7b0ce3 100%);
+}
+#accordion{
+    margin: 100px auto;
+    width: 600px;
+}
+#accordion li {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#accordion li label {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #0093E9;
+}
+
+#accordion li label span {
+    transform: rotate(90deg);
+    font-size: 22px;
+    color: #0093E9;
+}
+
+#accordion label + input[type="radio"] {
+    display: none;
+}
+
+#accordion .content {
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+#accordion label + input[type="radio"]:checked + .content {
+    max-height: 400px;
+}
